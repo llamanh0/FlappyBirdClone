@@ -14,9 +14,10 @@ public class BirdController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             rb.linearVelocity = Vector2.up * _jumpForce;
+            AudioManager.Instance.PlayJumpSound();
         }
     }
 

@@ -8,6 +8,7 @@ public class PipeIncreaseScore : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Score.instance.UpdateScore();
+            AudioManager.Instance.PlayScoreSound();
         }
     }
 }
