@@ -1268,13 +1268,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Version 12 Sprites_42
+      name: BlackBox
       rect:
         serializedVersion: 2
-        x: 291
-        y: 289
-        width: 18
-        height: 18
+        x: 292
+        y: 290
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1312,13 +1312,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Version 12 Sprites_44
+      name: WhiteBox
       rect:
         serializedVersion: 2
-        x: 291
-        y: 271
-        width: 18
-        height: 18
+        x: 292
+        y: 272
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2139,6 +2139,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      BlackBox: -3493463806159466461
       Mobile - Flappy Bird - Version 12 Sprites_0: 5003628964238269105
       Mobile - Flappy Bird - Version 12 Sprites_1: -221491057933239876
       Mobile - Flappy Bird - Version 12 Sprites_10: 5521694834215240920
@@ -2173,9 +2174,7 @@ TextureImporter:
       Mobile - Flappy Bird - Version 12 Sprites_4: -6830950117582225322
       Mobile - Flappy Bird - Version 12 Sprites_40: -1198990072333430829
       Mobile - Flappy Bird - Version 12 Sprites_41: 1693697968634820213
-      Mobile - Flappy Bird - Version 12 Sprites_42: -3493463806159466461
       Mobile - Flappy Bird - Version 12 Sprites_43: 230129452947892208
-      Mobile - Flappy Bird - Version 12 Sprites_44: 4495249375143456610
       Mobile - Flappy Bird - Version 12 Sprites_45: 875370270028939571
       Mobile - Flappy Bird - Version 12 Sprites_46: 7866015679261102617
       Mobile - Flappy Bird - Version 12 Sprites_47: 1687489963281649004
@@ -2217,6 +2216,7 @@ TextureImporter:
       Mobile - Flappy Bird - Version 12 Sprites_8: 5897210807152635017
       Mobile - Flappy Bird - Version 12 Sprites_80: -5850029005157357063
       Mobile - Flappy Bird - Version 12 Sprites_9: -8672742685835622642
+      WhiteBox: 4495249375143456610
       flappyBird: 8181548382722186305
       gameOver: 8433751597566169029
       playButton: 3255952901831296901
