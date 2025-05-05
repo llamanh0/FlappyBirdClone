@@ -23,4 +23,9 @@ public class BirdController : MonoBehaviour
     private void FixedUpdate() {
         transform.rotation = Quaternion.Euler(0, 0, rb.linearVelocityY * _rotationSpeed);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameManager.Instance.GameOver();
+    }
 }
