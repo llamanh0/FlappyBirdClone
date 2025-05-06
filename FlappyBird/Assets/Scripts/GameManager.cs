@@ -3,7 +3,6 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using TMPro;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _countdownText;
     [SerializeField] private float _countdownTime = 3f;
 
-
+    public bool _isPlaying;
 
     private void Awake()
     {
@@ -29,6 +28,7 @@ public class GameManager : MonoBehaviour
         _gameOverCanvas.SetActive(true);
 
         Time.timeScale = 0f;
+        _isPlaying = false;
         Debug.Log("Game Over");
     }
 
@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
         
         _countdownText.gameObject.SetActive(false);
         Time.timeScale = 1f;
+
+        _isPlaying = true;
     }
 
 }

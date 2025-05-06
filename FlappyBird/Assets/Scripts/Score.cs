@@ -41,7 +41,7 @@ public class Score : MonoBehaviour
         _score++;
         _currentScoreText.text = _score.ToString();
         
-        // Pulse efekti
+        // Pulse effect
         _currentScoreText.transform.DOPunchScale(Vector3.one * 1.3f, 0.5f, 1, 0.5f)
             .OnComplete(() => _currentScoreText.transform.localScale = Vector3.one);
         UpdateBestScore();

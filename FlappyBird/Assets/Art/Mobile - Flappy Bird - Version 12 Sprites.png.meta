@@ -498,13 +498,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Version 12 Sprites_6
+      name: menu
       rect:
         serializedVersion: 2
-        x: 461
-        y: 471
-        width: 42
-        height: 16
+        x: 462
+        y: 472
+        width: 40
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,13 +542,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Version 12 Sprites_8
+      name: ok
       rect:
         serializedVersion: 2
-        x: 461
-        y: 455
-        width: 42
-        height: 16
+        x: 462
+        y: 456
+        width: 40
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1422,13 +1422,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Version 12 Sprites_49
+      name: pause
       rect:
         serializedVersion: 2
-        x: 120
-        y: 191
-        width: 15
-        height: 16
+        x: 121
+        y: 192
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2179,7 +2179,6 @@ TextureImporter:
       Mobile - Flappy Bird - Version 12 Sprites_46: 7866015679261102617
       Mobile - Flappy Bird - Version 12 Sprites_47: 1687489963281649004
       Mobile - Flappy Bird - Version 12 Sprites_48: -1109645456820774316
-      Mobile - Flappy Bird - Version 12 Sprites_49: -6271202071706072646
       Mobile - Flappy Bird - Version 12 Sprites_5: -8998104236824694837
       Mobile - Flappy Bird - Version 12 Sprites_50: -5116034788630571233
       Mobile - Flappy Bird - Version 12 Sprites_51: -8766236444106804462
@@ -2191,7 +2190,6 @@ TextureImporter:
       Mobile - Flappy Bird - Version 12 Sprites_57: 5612758388853481413
       Mobile - Flappy Bird - Version 12 Sprites_58: -3946434259477265086
       Mobile - Flappy Bird - Version 12 Sprites_59: 8939277565488714815
-      Mobile - Flappy Bird - Version 12 Sprites_6: 6124130483509997730
       Mobile - Flappy Bird - Version 12 Sprites_60: 1933258764018161309
       Mobile - Flappy Bird - Version 12 Sprites_61: 6502591859315168610
       Mobile - Flappy Bird - Version 12 Sprites_62: -2498072389758807227
@@ -2213,12 +2211,14 @@ TextureImporter:
       Mobile - Flappy Bird - Version 12 Sprites_77: 9119582767357130973
       Mobile - Flappy Bird - Version 12 Sprites_78: -3307974742545668543
       Mobile - Flappy Bird - Version 12 Sprites_79: 1690715625158246458
-      Mobile - Flappy Bird - Version 12 Sprites_8: 5897210807152635017
       Mobile - Flappy Bird - Version 12 Sprites_80: -5850029005157357063
       Mobile - Flappy Bird - Version 12 Sprites_9: -8672742685835622642
       WhiteBox: 4495249375143456610
       flappyBird: 8181548382722186305
       gameOver: 8433751597566169029
+      menu: 6124130483509997730
+      ok: 5897210807152635017
+      pause: -6271202071706072646
       playButton: 3255952901831296901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

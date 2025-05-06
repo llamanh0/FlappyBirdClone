@@ -4,7 +4,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    [Header("Ses Efektleri")]
+    [Header("Sound Effects")]
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip scoreSound;
     [SerializeField] private AudioClip gameOverSound;
