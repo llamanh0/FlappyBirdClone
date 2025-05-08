@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LoopGround : MonoBehaviour
+public class Pipe : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = .65f;
     
@@ -8,12 +8,7 @@ public class LoopGround : MonoBehaviour
     {
         if (GameManager.Instance._isPlaying)
         {
-            if(transform.position.x <= -1.5f)
-            {
-                transform.position = new Vector3(1.5f, transform.position.y, transform.position.z);
-            }
             transform.position += Vector3.left * _moveSpeed * Time.deltaTime;
-            
         }
     }
 }

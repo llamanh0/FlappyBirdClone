@@ -1,36 +1,49 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
 public class PipeSpawner : MonoBehaviour
 {
-    [SerializeField] private float _maxTime = 1.5f;
+    [SerializeField] private float _spawnInterval = 1.5f;
     [SerializeField] private float _heightRange = 0.45f;
-    [SerializeField] private GameObject _pipePrefab;
+    [SerializeField] private float _pipeLifetime = 7f;
 
     private float _timer;
+    private Coroutine _spawnCoroutine;
 
-    void Start()
+    private void Start()
     {
-        SpawnPipe();
+        _timer = _spawnInterval;
     }
 
-    void Update()
+    private void Update()
     {
-        if (_timer > _maxTime)
-        {
-            SpawnPipe();
-            _timer = 0;
-        }
         _timer += Time.deltaTime;
+        
+        if (_timer >= _spawnInterval)
+        {
+            _spawnCoroutine = StartCoroutine(SpawnPipe());
+            _timer = 0f;
+        }
     }
 
-    private void SpawnPipe()
+    private IEnumerator SpawnPipe()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(0, Random.Range(-_heightRange, _heightRange) + 0.2f, 0);
-        GameObject pipe = Instantiate(_pipePrefab, spawnPosition, Quaternion.identity);
+        Vector3 spawnPos = transform.position + new Vector3(0, Random.Range(-_heightRange, _heightRange));
+        GameObject pipe = PipePool.Instance.GetPipe(spawnPos);
+        
+        yield return new WaitForSeconds(_pipeLifetime);
+        
+        if (pipe.activeInHierarchy) // Pipe is already active (if player didn't die)
+        {
+            PipePool.Instance.ReturnPipe(pipe);
+        }
+    }
 
-        Destroy(pipe, 10f);
-
+    private void OnDisable()
+    {
+        if (_spawnCoroutine != null)
+        {
+            StopCoroutine(_spawnCoroutine);
+        }
     }
 }

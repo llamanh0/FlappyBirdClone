@@ -22,6 +22,12 @@ public class GameManager : MonoBehaviour
         StartCoroutine(CountdownToStart());
     }
 
+    private void Start() {
+        Application.targetFrameRate = 60;
+        Screen.SetResolution(720, 1280, true); // 9:16 
+        Physics2D.autoSyncTransforms = false;
+    }
+
     public void GameOver()
     {
         AudioManager.Instance.PlayGameOverSound();
