@@ -8,12 +8,10 @@ public class LoopGround : MonoBehaviour
     {
         if (GameManager.Instance._isPlaying)
         {
-            if(transform.position.x <= -1.5f)
-            {
-                transform.position = new Vector3(1.5f, transform.position.y, transform.position.z);
-            }
+            // When it leaves the screen, reset the position
+            if(transform.position.x <= -1.5f) { transform.position = new Vector3(1.5f, transform.position.y, transform.position.z); }
+            // Move the ground
             transform.position += Vector3.left * _moveSpeed * Time.deltaTime;
-            
         }
     }
 }

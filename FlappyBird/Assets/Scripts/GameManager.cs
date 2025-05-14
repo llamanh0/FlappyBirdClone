@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Header("UI Components")]
     [SerializeField] private GameObject _gameOverCanvas;
     [SerializeField] private TextMeshProUGUI _countdownText;
+    
+    [Header("Settings")]
     [SerializeField] private float _countdownTime = 3f;
 
     public bool _isPlaying;
@@ -24,24 +27,25 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         Application.targetFrameRate = 60;
-        Screen.SetResolution(720, 1280, true); // 9:16 
         Physics2D.autoSyncTransforms = false;
     }
 
-    public void GameOver()
+    public void GameOver() => StartCoroutine(DelayedGameOver());
+
+    // Delayed Finish because of visual bugs
+    IEnumerator DelayedGameOver()
     {
+        yield return 0; // Wait for 1 frame.
+
         AudioManager.Instance.PlayGameOverSound();
-        _gameOverCanvas.SetActive(true);
-
+        
         Time.timeScale = 0f;
+        _gameOverCanvas.SetActive(true);
+        Pause.Instance.pauseButtonOnGame.SetActive(false);
         _isPlaying = false;
-        Debug.Log("Game Over");
     }
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    public void RestartGame() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
    IEnumerator CountdownToStart()
     {

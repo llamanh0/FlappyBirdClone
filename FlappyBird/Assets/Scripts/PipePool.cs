@@ -12,10 +12,7 @@ public class PipePool : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+        if (Instance == null) { Instance = this; }
         else
         {
             Destroy(gameObject);
@@ -27,6 +24,7 @@ public class PipePool : MonoBehaviour
 
     private void InitializePool()
     {
+        // Creating the objects
         for (int i = 0; i < _initialPoolSize; i++)
         {
             GameObject pipe = Instantiate(_pipePrefab);
@@ -39,15 +37,8 @@ public class PipePool : MonoBehaviour
     {
         GameObject pipe;
         
-        if (_pipePool.Count > 0)
-        {
-            pipe = _pipePool.Dequeue();
-        }
-        else
-        {
-            pipe = Instantiate(_pipePrefab);
-            Debug.LogWarning("Pool increased!");
-        }
+        if (_pipePool.Count > 0) { pipe = _pipePool.Dequeue(); } // If the pool is not empty, get the first pipe
+        else { pipe = Instantiate(_pipePrefab); } // If the pool is empty, create a new pipe
 
         pipe.transform.position = position;
         pipe.SetActive(true);

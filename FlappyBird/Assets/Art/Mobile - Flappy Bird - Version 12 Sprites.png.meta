@@ -1070,13 +1070,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Flappy Bird - Version 12 Sprites_33
+      name: pauseButton
       rect:
         serializedVersion: 2
-        x: 333
-        y: 355
-        width: 15
-        height: 16
+        x: 334
+        y: 356
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2164,7 +2164,6 @@ TextureImporter:
       Mobile - Flappy Bird - Version 12 Sprites_30: 7398090637607482551
       Mobile - Flappy Bird - Version 12 Sprites_31: -6254503077443945986
       Mobile - Flappy Bird - Version 12 Sprites_32: -9122068741642065400
-      Mobile - Flappy Bird - Version 12 Sprites_33: -5779524432928888368
       Mobile - Flappy Bird - Version 12 Sprites_34: -3849540773915607897
       Mobile - Flappy Bird - Version 12 Sprites_35: -669485644550663331
       Mobile - Flappy Bird - Version 12 Sprites_36: -6839551214000160459
@@ -2219,6 +2218,7 @@ TextureImporter:
       menu: 6124130483509997730
       ok: 5897210807152635017
       pause: -6271202071706072646
+      pauseButton: -5779524432928888368
       playButton: 3255952901831296901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -4,20 +4,22 @@ using DG.Tweening;
 
 public class Score : MonoBehaviour
 {
-    public static Score instance;
+    public static Score Instance;
 
     [SerializeField] private TextMeshProUGUI _currentScoreText;
     [SerializeField] private TextMeshProUGUI _bestScoreText;
+    [SerializeField] private TextMeshProUGUI _fpsText;
+
+    [SerializeField] private float _fpsUpdateInterval = 0.5f;
+
+    private float _fpsTimer;
+    private int _frameCount;
 
     private int _score;
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
+    void Awake() { if (Instance == null) { Instance = this; } }
+
+    void Update() => UpdateFPSCounter();
 
     void Start()
     {
@@ -46,4 +48,22 @@ public class Score : MonoBehaviour
             .OnComplete(() => _currentScoreText.transform.localScale = Vector3.one);
         UpdateBestScore();
     }
+
+    private void UpdateFPSCounter()
+        {
+            if (_fpsText != null)
+            {
+                _frameCount++;
+                _fpsTimer += Time.unscaledDeltaTime;
+
+                if (_fpsTimer >= _fpsUpdateInterval)
+                {
+                    float fps = _frameCount / _fpsTimer;
+                    _fpsText.text = $"{Mathf.Round(fps)} FPS";
+                    
+                    _frameCount = 0;
+                    _fpsTimer = 0;
+                }
+            }
+        }
 }

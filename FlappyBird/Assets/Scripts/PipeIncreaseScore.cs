@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PipeIncreaseScore : MonoBehaviour
@@ -7,7 +6,7 @@ public class PipeIncreaseScore : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Score.instance.UpdateScore();
+            Score.Instance.UpdateScore();
             AudioManager.Instance.PlayScoreSound();
         }
     }
