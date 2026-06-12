@@ -1,11 +1,10 @@
-# ShaderLab dosyalarını istatistiklerden çıkar
-*.shader linguist-vendored
-*.cginc linguist-vendored
+*.shader linguist-detectable=false
+*.hlsl linguist-detectable=false
+*.cginc linguist-detectable=false
+
 *.compute linguist-vendored
 
-# Unity'nin otomatik oluşturduğu tüm meta dosyalarını gizle
 *.meta linguist-vendored
 
-# Paketleri ve eklentileri (Plugins) istatistikten düş
 Assets/Plugins/** linguist-vendored
 Packages/** linguist-vendored
